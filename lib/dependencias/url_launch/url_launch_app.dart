@@ -23,4 +23,12 @@ class UrlLaunchApp {
       log("$e\n\n$s");
     }
   }
+
+  Future<void> launchURL(String url) async {
+    try {
+      launchUrl(Uri.parse(url));
+    } catch (e, s) {
+      log("$e\n\n$s");
+    }
+  }
 }
