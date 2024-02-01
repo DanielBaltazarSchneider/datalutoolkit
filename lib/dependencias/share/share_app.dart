@@ -10,4 +10,8 @@ class ShareApp {
       print('Did you not like the pictures?');
     }
   }
+
+  Future<void> shareText(String txt) async {
+    Share.share(txt);
+  }
 }
