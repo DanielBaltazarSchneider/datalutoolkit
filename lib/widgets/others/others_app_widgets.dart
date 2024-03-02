@@ -40,7 +40,7 @@ class OthersAppWidgets extends StatelessWidget {
                   child: MeuAppWidget(
                     title: "Amostragem de Solo",
                     asset: "$pathAsset/amostragemsolo.png",
-                    onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.amostragemsolopro"),
+                    onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.amostragemsolo.amostragemsolo"),
                   ),
                 ),
                 Visibility(
