@@ -10,6 +10,7 @@ class OthersAppWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String pathAsset = "assets/apps";
     return SizedBox(
       width: context.screenWidth,
       child: Column(
@@ -30,7 +31,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.amostragemSoloPro),
                   child: MeuAppWidget(
                     title: "Amostragem de Solo PRO",
-                    asset: "assets/apps/amostragemsolopro.png",
+                    asset: "$pathAsset/amostragemsolopro.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.amostragemsolopro"),
                   ),
                 ),
@@ -38,7 +39,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.amostragemSoloFree),
                   child: MeuAppWidget(
                     title: "Amostragem de Solo",
-                    asset: "assets/apps/amostragemsolo.png",
+                    asset: "$pathAsset/amostragemsolo.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.amostragemsolopro"),
                   ),
                 ),
@@ -46,7 +47,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.calagemAdubacaoPro),
                   child: MeuAppWidget(
                     title: "Calagem & Adubação PRO",
-                    asset: "assets/apps/calagemadubacaopro.png",
+                    asset: "$pathAsset/calagemadubacaopro.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.calagembrasilpro"),
                   ),
                 ),
@@ -54,7 +55,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.calagemAdubacaoFree),
                   child: MeuAppWidget(
                     title: "Calagem & Adubação FREE",
-                    asset: "assets/apps/calagemadubacaofree.png",
+                    asset: "$pathAsset/calagemadubacaofree.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.stringsoft.calagem_brasil"),
                   ),
                 ),
@@ -62,7 +63,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.planteCerto),
                   child: MeuAppWidget(
                     title: "Cálculos de Plantio",
-                    asset: "assets/apps/plantecerto.png",
+                    asset: "$pathAsset/plantecerto.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.plantecerto"),
                   ),
                 ),
@@ -70,7 +71,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.consultaVazio),
                   child: MeuAppWidget(
                     title: "Vazio Sanitário da Soja",
-                    asset: "assets/apps/consultavazio.jpeg",
+                    asset: "$pathAsset/consultavazio.jpeg",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=com.br.datalu.vaziosanitario"),
                   ),
                 ),
@@ -78,7 +79,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.marcadorArea),
                   child: MeuAppWidget(
                     title: "Marcador de áreas e distâncias",
-                    asset: "assets/apps/marcadorareadistancias.png",
+                    asset: "$pathAsset/marcadorareadistancias.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=com.br.datalu.mapareacalculator"),
                   ),
                 ),
@@ -86,7 +87,7 @@ class OthersAppWidgets extends StatelessWidget {
                   visible: !hideApps.contains(EnApp.qrCodeScannerGenerator),
                   child: MeuAppWidget(
                     title: "QR Code Scanner Gerador",
-                    asset: "assets/apps/qrcodescanner.png",
+                    asset: "$pathAsset/qrcodescanner.png",
                     onTap: () => UrlLaunchApp().launchURL("https://play.google.com/store/apps/details?id=br.com.datalu.qrcodegenerator"),
                   ),
                 ),
@@ -133,6 +134,7 @@ class MeuAppWidget extends StatelessWidget {
                 child: Image.asset(
                   asset,
                   width: context.screenWidth * 0.25,
+                  package: "datalutoolkit",
                 ),
               ),
             ),
